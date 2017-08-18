@@ -30,10 +30,18 @@
         <h5>Description: </h5>
         <div>@Html.Raw(description)</div>
         
-        <h5>Artists:</h5>
-        <div>
-        </div>
-
+        @if (artists.Length > 0)
+        {
+            <h5>Artists:</h5>
+            <div>
+                <ul>
+                    @for (int i = 0; i < artists.Length; i++)
+                    {
+                        <li>@artists[i]</li>
+                    }
+                </ul>
+            </div>
+        }
 
     </div>
 </body>
